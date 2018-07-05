@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C13FFEE20EE6FCC00611AAC /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C13FFED20EE6FCC00611AAC /* FormatDisplay.swift */; };
+		5C13FFF120EE78AD00611AAC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C13FFF020EE78AD00611AAC /* LocationManager.swift */; };
 		5C8D904B20ED234900B78B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D904A20ED234900B78B41 /* AppDelegate.swift */; };
 		5C8D904D20ED234900B78B41 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D904C20ED234900B78B41 /* HomeViewController.swift */; };
 		5C8D905020ED234900B78B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D904E20ED234900B78B41 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C13FFED20EE6FCC00611AAC /* FormatDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormatDisplay.swift; sourceTree = "<group>"; };
+		5C13FFF020EE78AD00611AAC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		5C8D904720ED234900B78B41 /* Velometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Velometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8D904A20ED234900B78B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5C8D904C20ED234900B78B41 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5C13FFEF20EE789200611AAC /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				5C13FFF020EE78AD00611AAC /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		5C8D903E20ED234900B78B41 = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				5C8D904A20ED234900B78B41 /* AppDelegate.swift */,
-				5C8D907F20ED33D300B78B41 /* Utils */,
 				5C8D907B20ED254600B78B41 /* Core Data */,
+				5C13FFEF20EE789200611AAC /* Location */,
+				5C8D907F20ED33D300B78B41 /* Utils */,
 				5C8D907E20ED338600B78B41 /* ViewControllers */,
 				5C8D908020ED33DF00B78B41 /* Supporting FIles */,
 			);
@@ -151,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				5CF7DC9220ED344700EE081C /* UnitExtensions.swift */,
+				5C13FFED20EE6FCC00611AAC /* FormatDisplay.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -234,6 +248,11 @@
 				TargetAttributes = {
 					5C8D904620ED234900B78B41 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					5C8D905D20ED234A00B78B41 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -300,6 +319,8 @@
 				5C8D905320ED234900B78B41 /* Velometer.xcdatamodeld in Sources */,
 				5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */,
 				5C8D904D20ED234900B78B41 /* HomeViewController.swift in Sources */,
+				5C13FFF120EE78AD00611AAC /* LocationManager.swift in Sources */,
+				5C13FFEE20EE6FCC00611AAC /* FormatDisplay.swift in Sources */,
 				5C8D904B20ED234900B78B41 /* AppDelegate.swift in Sources */,
 				5C8D907D20ED256500B78B41 /* CoreDataStack.swift in Sources */,
 			);
