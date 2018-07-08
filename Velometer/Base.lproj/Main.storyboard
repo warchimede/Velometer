@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-bB-BDx">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-bB-BDx">
                                 <rect key="frame" x="0.0" y="64" width="375" height="359"/>
                             </mapView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hz3-xb-GUb">
@@ -169,6 +169,7 @@
                     <connections>
                         <outlet property="distanceLabel" destination="S9e-PI-Qc9" id="Edh-52-kEv"/>
                         <outlet property="historyButton" destination="XkE-qX-xmV" id="5ih-jZ-uPZ"/>
+                        <outlet property="mapView" destination="Rec-bB-BDx" id="eMe-IC-Hcy"/>
                         <outlet property="paceLabel" destination="B6Q-tl-VyC" id="wbv-1n-dbR"/>
                         <outlet property="speedLabel" destination="LcK-2r-sC0" id="f21-8R-VKV"/>
                         <outlet property="startButton" destination="jm2-Mb-GwO" id="KRv-h5-IaR"/>
