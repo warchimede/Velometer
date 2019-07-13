@@ -33,8 +33,10 @@ class NewRaceViewController: UIViewController {
 
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == SegueIdentifier.raceRecap.rawValue {
-      let raceRecapVC = segue.destination as? RaceRecapViewController
-      raceRecapVC?.race = makeRace()
+      let navVC = segue.destination as? UINavigationController
+      let recapVC = navVC?.topViewController as? RaceRecapViewController
+      let race = RaceProxy(distance: distance.value, duration: seconds, date: Date(), locations: locationList)
+      recapVC?.race = race
     }
   }
 
@@ -57,23 +59,6 @@ class NewRaceViewController: UIViewController {
     timeLabel.text = formattedTime
     speedLabel.text = formattedSpeed
     paceLabel.text = formattedPace
-  }
-
-  private func makeRace() -> Race {
-    let newRace = Race(context: CoreDataStack.context)
-    newRace.distance = distance.value
-    newRace.duration = Int16(seconds)
-    newRace.date = Date()
-
-    locationList.forEach { location in
-      let locationObject = Location(context: CoreDataStack.context)
-      locationObject.timestamp = location.timestamp
-      locationObject.latitude = location.coordinate.latitude
-      locationObject.longitude = location.coordinate.longitude
-      newRace.addToLocations(locationObject)
-    }
-
-    return newRace
   }
 
   @IBAction func stopRace(_ sender: Any) {

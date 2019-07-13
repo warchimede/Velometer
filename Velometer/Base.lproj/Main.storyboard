@@ -232,7 +232,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EH4-fU-41p">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Rza-f5-b8t">
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rza-f5-b8t">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
                                     </mapView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5i-3k-ibk">
@@ -272,6 +272,9 @@
                         <viewLayoutGuide key="safeArea" id="mJr-PV-zns"/>
                     </view>
                     <navigationItem key="navigationItem" id="BW3-8x-cBg"/>
+                    <connections>
+                        <outlet property="mapView" destination="Rza-f5-b8t" id="ugy-2d-1UU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sky-9l-52k" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
