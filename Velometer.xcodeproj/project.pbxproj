@@ -10,7 +10,7 @@
 		5C13FFEE20EE6FCC00611AAC /* FormatDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C13FFED20EE6FCC00611AAC /* FormatDisplay.swift */; };
 		5C13FFF120EE78AD00611AAC /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C13FFF020EE78AD00611AAC /* LocationManager.swift */; };
 		5C8D904B20ED234900B78B41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D904A20ED234900B78B41 /* AppDelegate.swift */; };
-		5C8D904D20ED234900B78B41 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D904C20ED234900B78B41 /* HomeViewController.swift */; };
+		5C8D904D20ED234900B78B41 /* OldHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D904C20ED234900B78B41 /* OldHomeViewController.swift */; };
 		5C8D905020ED234900B78B41 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D904E20ED234900B78B41 /* Main.storyboard */; };
 		5C8D905320ED234900B78B41 /* Velometer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D905120ED234900B78B41 /* Velometer.xcdatamodeld */; };
 		5C8D905520ED234A00B78B41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C8D905420ED234A00B78B41 /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 		5C8D906320ED234A00B78B41 /* VelometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D906220ED234A00B78B41 /* VelometerTests.swift */; };
 		5C8D906E20ED234A00B78B41 /* VelometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D906D20ED234A00B78B41 /* VelometerUITests.swift */; };
 		5C8D907D20ED256500B78B41 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D907C20ED256500B78B41 /* CoreDataStack.swift */; };
-		5CABD2A322DA0DB800C28570 /* NewRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A222DA0DB800C28570 /* NewRaceViewController.swift */; };
+		5CABD2A322DA0DB800C28570 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A222DA0DB800C28570 /* HomeViewController.swift */; };
 		5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7DC9220ED344700EE081C /* UnitExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +44,7 @@
 		5C13FFF020EE78AD00611AAC /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		5C8D904720ED234900B78B41 /* Velometer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Velometer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C8D904A20ED234900B78B41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5C8D904C20ED234900B78B41 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5C8D904C20ED234900B78B41 /* OldHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldHomeViewController.swift; sourceTree = "<group>"; };
 		5C8D904F20ED234900B78B41 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5C8D905220ED234900B78B41 /* Velometer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Velometer.xcdatamodel; sourceTree = "<group>"; };
 		5C8D905420ED234A00B78B41 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		5C8D906D20ED234A00B78B41 /* VelometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VelometerUITests.swift; sourceTree = "<group>"; };
 		5C8D906F20ED234A00B78B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8D907C20ED256500B78B41 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		5CABD2A222DA0DB800C28570 /* NewRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRaceViewController.swift; sourceTree = "<group>"; };
+		5CABD2A222DA0DB800C28570 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5CF7DC9220ED344700EE081C /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,8 +157,8 @@
 		5C8D907E20ED338600B78B41 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5C8D904C20ED234900B78B41 /* HomeViewController.swift */,
-				5CABD2A222DA0DB800C28570 /* NewRaceViewController.swift */,
+				5C8D904C20ED234900B78B41 /* OldHomeViewController.swift */,
+				5CABD2A222DA0DB800C28570 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -324,8 +324,8 @@
 			files = (
 				5C8D905320ED234900B78B41 /* Velometer.xcdatamodeld in Sources */,
 				5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */,
-				5CABD2A322DA0DB800C28570 /* NewRaceViewController.swift in Sources */,
-				5C8D904D20ED234900B78B41 /* HomeViewController.swift in Sources */,
+				5CABD2A322DA0DB800C28570 /* HomeViewController.swift in Sources */,
+				5C8D904D20ED234900B78B41 /* OldHomeViewController.swift in Sources */,
 				5C13FFF120EE78AD00611AAC /* LocationManager.swift in Sources */,
 				5C13FFEE20EE6FCC00611AAC /* FormatDisplay.swift in Sources */,
 				5C8D904B20ED234900B78B41 /* AppDelegate.swift in Sources */,

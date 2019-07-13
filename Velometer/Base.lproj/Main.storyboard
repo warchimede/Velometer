@@ -10,68 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Home View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="Velometer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" zoomEnabled="NO" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rec-bB-BDx">
-                                <rect key="frame" x="0.0" y="64" width="375" height="359"/>
-                            </mapView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hz3-xb-GUb">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="8si-hq-fSn"/>
-                                </constraints>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="pDP-7Q-XO1"/>
-                                    <barButtonItem systemItem="add" id="jm2-Mb-GwO">
-                                        <connections>
-                                            <action selector="startRace:" destination="BYZ-38-t0r" id="gMb-3X-OHs"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem width="20" style="plain" systemItem="fixedSpace" id="6kA-T7-iAQ"/>
-                                    <barButtonItem enabled="NO" systemItem="stop" id="i0b-zi-3N1">
-                                        <connections>
-                                            <action selector="stopRace:" destination="BYZ-38-t0r" id="95R-wm-0Z3"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="P4G-Kk-8fe"/>
-                                    <barButtonItem systemItem="bookmarks" id="XkE-qX-xmV"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bEt-8i-UxI"/>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="Rec-bB-BDx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3qY-jO-xKO"/>
-                            <constraint firstItem="Hz3-xb-GUb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4w0-RW-AP9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Hz3-xb-GUb" secondAttribute="bottom" id="av3-3e-4pU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rec-bB-BDx" secondAttribute="trailing" id="hRe-8e-tAc"/>
-                            <constraint firstItem="Rec-bB-BDx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pMe-cu-4Qd"/>
-                            <constraint firstItem="Hz3-xb-GUb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="rjB-z2-6eN"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="nHN-0M-QGa"/>
-                    <connections>
-                        <outlet property="historyButton" destination="XkE-qX-xmV" id="5ih-jZ-uPZ"/>
-                        <outlet property="mapView" destination="Rec-bB-BDx" id="eMe-IC-Hcy"/>
-                        <outlet property="startButton" destination="jm2-Mb-GwO" id="KRv-h5-IaR"/>
-                        <outlet property="stopButton" destination="i0b-zi-3N1" id="ASS-Sx-7mu"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="972" y="33.733133433283363"/>
-        </scene>
-        <!--New Race-->
+        <!--Velometer-->
         <scene sceneID="euV-AH-asH">
             <objects>
-                <viewController id="sTQ-ya-xOV" customClass="NewRaceViewController" customModule="Velometer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="sTQ-ya-xOV" customClass="HomeViewController" customModule="Velometer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0Fi-Vw-iic">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -104,7 +46,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u8L-je-KMR"/>
                     </view>
-                    <navigationItem key="navigationItem" title="New Race" id="0r5-ky-GnQ">
+                    <navigationItem key="navigationItem" title="Velometer" id="0r5-ky-GnQ">
                         <barButtonItem key="rightBarButtonItem" systemItem="bookmarks" id="LbV-9m-dxN">
                             <connections>
                                 <segue destination="lbh-oJ-Npz" kind="show" id="0uh-0a-BTw"/>
@@ -283,24 +225,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hy0-x6-lAt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4425" y="-617"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="s6s-uy-k7e">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="thM-Nc-yNd" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KUC-YV-vWe">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="fKa-At-LPk"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xwT-Dj-3h6" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="114" y="34"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="DEu-Qy-pac">
