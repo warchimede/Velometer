@@ -9,14 +9,8 @@
 import Foundation
 
 struct FormatDisplay {
-  static func distance(_ distance: Double) -> String {
-    let distanceMeasurement = Measurement(value: distance, unit: UnitLength.kilometers)
-    return FormatDisplay.distance(distanceMeasurement)
-  }
-
   static func distance(_ distance: Measurement<UnitLength>) -> String {
-    let formatter = MeasurementFormatter()
-    return formatter.string(from: distance)
+    return MeasurementFormatter().string(from: distance)
   }
 
   static func time(_ seconds: Int) -> String {

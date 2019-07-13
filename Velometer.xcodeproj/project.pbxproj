@@ -19,6 +19,7 @@
 		5C8D906E20ED234A00B78B41 /* VelometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D906D20ED234A00B78B41 /* VelometerUITests.swift */; };
 		5C8D907D20ED256500B78B41 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D907C20ED256500B78B41 /* CoreDataStack.swift */; };
 		5CABD2A322DA0DB800C28570 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A222DA0DB800C28570 /* HomeViewController.swift */; };
+		5CABD2A522DA1F1300C28570 /* NewRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A422DA1F1300C28570 /* NewRaceViewController.swift */; };
 		5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7DC9220ED344700EE081C /* UnitExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		5C8D906F20ED234A00B78B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8D907C20ED256500B78B41 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5CABD2A222DA0DB800C28570 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5CABD2A422DA1F1300C28570 /* NewRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRaceViewController.swift; sourceTree = "<group>"; };
 		5CF7DC9220ED344700EE081C /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -157,8 +159,9 @@
 		5C8D907E20ED338600B78B41 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5C8D904C20ED234900B78B41 /* OldHomeViewController.swift */,
 				5CABD2A222DA0DB800C28570 /* HomeViewController.swift */,
+				5CABD2A422DA1F1300C28570 /* NewRaceViewController.swift */,
+				5C8D904C20ED234900B78B41 /* OldHomeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 				5C8D905320ED234900B78B41 /* Velometer.xcdatamodeld in Sources */,
 				5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */,
 				5CABD2A322DA0DB800C28570 /* HomeViewController.swift in Sources */,
+				5CABD2A522DA1F1300C28570 /* NewRaceViewController.swift in Sources */,
 				5C8D904D20ED234900B78B41 /* OldHomeViewController.swift in Sources */,
 				5C13FFF120EE78AD00611AAC /* LocationManager.swift in Sources */,
 				5C13FFEE20EE6FCC00611AAC /* FormatDisplay.swift in Sources */,

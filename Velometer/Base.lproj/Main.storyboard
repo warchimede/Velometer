@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="3694" y="-618"/>
         </scene>
-        <!--Racing-->
+        <!--New Race-->
         <scene sceneID="mYQ-Pk-kMM">
             <objects>
-                <viewController id="kre-NQ-Th8" sceneMemberID="viewController">
+                <viewController id="kre-NQ-Th8" customClass="NewRaceViewController" customModule="Velometer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0UH-K4-3c5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -205,7 +205,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mD9-bf-Ov8"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Racing" id="pAD-HE-zmJ"/>
+                    <navigationItem key="navigationItem" title="New Race" id="pAD-HE-zmJ"/>
+                    <connections>
+                        <outlet property="distanceLabel" destination="LSA-XO-Keg" id="foc-1e-Ckh"/>
+                        <outlet property="paceLabel" destination="zxr-0Y-AR6" id="HOC-Oe-H7C"/>
+                        <outlet property="speedLabel" destination="oet-ty-aoQ" id="1d4-vd-hmQ"/>
+                        <outlet property="timeLabel" destination="qgr-Xo-weX" id="dK1-9e-WhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ueD-YJ-mwB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
