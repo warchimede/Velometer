@@ -20,6 +20,8 @@
 		5C8D907D20ED256500B78B41 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D907C20ED256500B78B41 /* CoreDataStack.swift */; };
 		5CABD2A322DA0DB800C28570 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A222DA0DB800C28570 /* HomeViewController.swift */; };
 		5CABD2A522DA1F1300C28570 /* NewRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A422DA1F1300C28570 /* NewRaceViewController.swift */; };
+		5CABD2A722DA2E7100C28570 /* RaceRecapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A622DA2E7100C28570 /* RaceRecapViewController.swift */; };
+		5CABD2A922DA312300C28570 /* SegueIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A822DA312300C28570 /* SegueIdentifier.swift */; };
 		5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7DC9220ED344700EE081C /* UnitExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		5C8D907C20ED256500B78B41 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		5CABD2A222DA0DB800C28570 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5CABD2A422DA1F1300C28570 /* NewRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRaceViewController.swift; sourceTree = "<group>"; };
+		5CABD2A622DA2E7100C28570 /* RaceRecapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceRecapViewController.swift; sourceTree = "<group>"; };
+		5CABD2A822DA312300C28570 /* SegueIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueIdentifier.swift; sourceTree = "<group>"; };
 		5CF7DC9220ED344700EE081C /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,6 +166,7 @@
 				5CABD2A222DA0DB800C28570 /* HomeViewController.swift */,
 				5CABD2A422DA1F1300C28570 /* NewRaceViewController.swift */,
 				5C8D904C20ED234900B78B41 /* OldHomeViewController.swift */,
+				5CABD2A622DA2E7100C28570 /* RaceRecapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -169,8 +174,9 @@
 		5C8D907F20ED33D300B78B41 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				5CF7DC9220ED344700EE081C /* UnitExtensions.swift */,
 				5C13FFED20EE6FCC00611AAC /* FormatDisplay.swift */,
+				5CF7DC9220ED344700EE081C /* UnitExtensions.swift */,
+				5CABD2A822DA312300C28570 /* SegueIdentifier.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 			files = (
 				5C8D905320ED234900B78B41 /* Velometer.xcdatamodeld in Sources */,
 				5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */,
+				5CABD2A922DA312300C28570 /* SegueIdentifier.swift in Sources */,
 				5CABD2A322DA0DB800C28570 /* HomeViewController.swift in Sources */,
 				5CABD2A522DA1F1300C28570 /* NewRaceViewController.swift in Sources */,
 				5C8D904D20ED234900B78B41 /* OldHomeViewController.swift in Sources */,
@@ -334,6 +341,7 @@
 				5C13FFEE20EE6FCC00611AAC /* FormatDisplay.swift in Sources */,
 				5C8D904B20ED234900B78B41 /* AppDelegate.swift in Sources */,
 				5C8D907D20ED256500B78B41 /* CoreDataStack.swift in Sources */,
+				5CABD2A722DA2E7100C28570 /* RaceRecapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

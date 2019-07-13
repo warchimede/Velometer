@@ -16,11 +16,12 @@ class NewRaceViewController: UIViewController {
   @IBOutlet weak var speedLabel: UILabel!
   @IBOutlet weak var paceLabel: UILabel!
 
-  private var race: Race?
   private var seconds = 0
   private var timer: Timer?
   private var distance: Measurement<UnitLength> = Measurement(value: 0, unit: UnitLength.meters)
   private var locationList: [CLLocation] = []
+
+  // Mark: - Life cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,15 +29,14 @@ class NewRaceViewController: UIViewController {
     startRace()
   }
 
-  /*
-   // MARK: - Navigation
+  // MARK: - Navigation
 
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   // Get the new view controller using segue.destination.
-   // Pass the selected object to the new view controller.
-   }
-   */
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == SegueIdentifier.raceRecap.rawValue {
+      let raceRecapVC = segue.destination as? RaceRecapViewController
+      raceRecapVC?.race = makeRace()
+    }
+  }
 
   private func startRace() {
     timer =  Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [weak self] _ in
@@ -57,6 +57,29 @@ class NewRaceViewController: UIViewController {
     timeLabel.text = formattedTime
     speedLabel.text = formattedSpeed
     paceLabel.text = formattedPace
+  }
+
+  private func makeRace() -> Race {
+    let newRace = Race(context: CoreDataStack.context)
+    newRace.distance = distance.value
+    newRace.duration = Int16(seconds)
+    newRace.date = Date()
+
+    locationList.forEach { location in
+      let locationObject = Location(context: CoreDataStack.context)
+      locationObject.timestamp = location.timestamp
+      locationObject.latitude = location.coordinate.latitude
+      locationObject.longitude = location.coordinate.longitude
+      newRace.addToLocations(locationObject)
+    }
+
+    return newRace
+  }
+
+  @IBAction func stopRace(_ sender: Any) {
+    timer?.invalidate()
+    LocationManager.shared.stopUpdatingLocation()
+    performSegue(withIdentifier: SegueIdentifier.raceRecap.rawValue, sender: nil)
   }
 }
 
