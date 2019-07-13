@@ -18,6 +18,7 @@
 		5C8D906320ED234A00B78B41 /* VelometerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D906220ED234A00B78B41 /* VelometerTests.swift */; };
 		5C8D906E20ED234A00B78B41 /* VelometerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D906D20ED234A00B78B41 /* VelometerUITests.swift */; };
 		5C8D907D20ED256500B78B41 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C8D907C20ED256500B78B41 /* CoreDataStack.swift */; };
+		5CABD2A322DA0DB800C28570 /* NewRaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CABD2A222DA0DB800C28570 /* NewRaceViewController.swift */; };
 		5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF7DC9220ED344700EE081C /* UnitExtensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		5C8D906D20ED234A00B78B41 /* VelometerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VelometerUITests.swift; sourceTree = "<group>"; };
 		5C8D906F20ED234A00B78B41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C8D907C20ED256500B78B41 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5CABD2A222DA0DB800C28570 /* NewRaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRaceViewController.swift; sourceTree = "<group>"; };
 		5CF7DC9220ED344700EE081C /* UnitExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				5C8D904C20ED234900B78B41 /* HomeViewController.swift */,
+				5CABD2A222DA0DB800C28570 /* NewRaceViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 			files = (
 				5C8D905320ED234900B78B41 /* Velometer.xcdatamodeld in Sources */,
 				5CF7DC9320ED344700EE081C /* UnitExtensions.swift in Sources */,
+				5CABD2A322DA0DB800C28570 /* NewRaceViewController.swift in Sources */,
 				5C8D904D20ED234900B78B41 /* HomeViewController.swift in Sources */,
 				5C13FFF120EE78AD00611AAC /* LocationManager.swift in Sources */,
 				5C13FFEE20EE6FCC00611AAC /* FormatDisplay.swift in Sources */,
