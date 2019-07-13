@@ -10,7 +10,7 @@ import Foundation
 
 struct FormatDisplay {
   static func distance(_ distance: Double) -> String {
-    let distanceMeasurement = Measurement(value: distance, unit: UnitLength.meters)
+    let distanceMeasurement = Measurement(value: distance, unit: UnitLength.kilometers)
     return FormatDisplay.distance(distanceMeasurement)
   }
 
@@ -27,11 +27,11 @@ struct FormatDisplay {
     return formatter.string(from: TimeInterval(seconds)) ?? ""
   }
 
-  static func pace(distance: Measurement<UnitLength>, seconds: Int, outputUnit: UnitSpeed) -> String {
-    let formatter = MeasurementFormatter()
-    formatter.unitOptions = [.providedUnit]
+  static func speedOrPace(distance: Measurement<UnitLength>, seconds: Int, outputUnit: UnitSpeed) -> String {
     let speedMagnitude = seconds != 0 ? distance.value / Double(seconds) : 0
     let speed = Measurement(value: speedMagnitude, unit: UnitSpeed.metersPerSecond)
+    let formatter = MeasurementFormatter()
+    formatter.unitOptions = [.providedUnit]
     return formatter.string(from: speed.converted(to: outputUnit))
   }
 

@@ -64,6 +64,7 @@ class HomeViewController: UIViewController {
       self.saveRace()
       self.loadMap()
     })
+    alert.addAction(UIAlertAction(title: "Cancel", style: .destructive, handler: nil))
     present(alert, animated: true)
   }
 
@@ -77,10 +78,12 @@ class HomeViewController: UIViewController {
   private func updateDisplay() {
     let formattedDistance = FormatDisplay.distance(distance)
     let formattedTime = FormatDisplay.time(seconds)
-    let formattedPace = FormatDisplay.pace(distance: distance, seconds: seconds, outputUnit: UnitSpeed.minutesPerKilometer)
+    let formattedSpeed = FormatDisplay.speedOrPace(distance: distance, seconds: seconds, outputUnit: UnitSpeed.kilometersPerHour)
+    let formattedPace = FormatDisplay.speedOrPace(distance: distance, seconds: seconds, outputUnit: UnitSpeed.minutesPerKilometer)
 
     distanceLabel.text = formattedDistance
     timeLabel.text = formattedTime
+    speedLabel.text = formattedSpeed
     paceLabel.text = formattedPace
 
     if let coordinate = LocationManager.shared.location?.coordinate {
@@ -157,7 +160,7 @@ extension HomeViewController: MKMapViewDelegate {
     }
 
     mapView.setRegion(region, animated: true)
-    mapView.add(polyLine())
+    mapView.addOverlay(polyLine())
   }
 
   func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
