@@ -35,7 +35,7 @@ class NewRaceViewController: UIViewController {
     if segue.identifier == SegueIdentifier.raceRecap.rawValue {
       let navVC = segue.destination as? UINavigationController
       let recapVC = navVC?.topViewController as? RaceRecapViewController
-      let race = RaceProxy(distance: distance.value, duration: seconds, date: Date(), locations: locationList)
+      let race = RaceProxy(distance: distance, duration: seconds, date: Date(), locations: locationList)
       recapVC?.race = race
     }
   }

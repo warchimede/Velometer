@@ -29,10 +29,10 @@ struct FormatDisplay {
     return formatter.string(from: speed.converted(to: outputUnit))
   }
 
-  static func date(_ timestamp: Date?) -> String {
+  static func date(_ timestamp: Date?, style: DateFormatter.Style) -> String {
     guard let timestamp = timestamp as Date? else { return "" }
     let formatter = DateFormatter()
-    formatter.dateStyle = .medium
+    formatter.dateStyle = style
     return formatter.string(from: timestamp)
   }
 }

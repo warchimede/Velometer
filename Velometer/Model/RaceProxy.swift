@@ -10,7 +10,7 @@ import CoreLocation
 import Foundation
 
 struct RaceProxy {
-  let distance: Double
+  let distance: Measurement<UnitLength>
   let duration: Int
   let date: Date
   let locations: [CLLocation]

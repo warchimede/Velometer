@@ -11,15 +11,18 @@ import UIKit
 
 class RaceRecapViewController: UIViewController {
   @IBOutlet weak var mapView: MKMapView!
+  @IBOutlet weak var distanceLabel: UILabel!
+  @IBOutlet weak var timeLabel: UILabel!
+  @IBOutlet weak var speedLabel: UILabel!
+  @IBOutlet weak var paceLabel: UILabel!
 
-  var race: RaceProxy!
+  var race: RaceProxy?
 
   // MARK: - Life cycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    title = FormatDisplay.date(race?.date)
     mapView.delegate = self
   }
 
@@ -27,6 +30,7 @@ class RaceRecapViewController: UIViewController {
     super.viewWillAppear(animated)
 
     loadMap()
+    updateDisplay()
   }
 
   // MARK: - Actions
@@ -34,7 +38,7 @@ class RaceRecapViewController: UIViewController {
   @IBAction func save(_ sender: Any) {
     if let race = race {
       let newRace = Race(context: CoreDataStack.context)
-      newRace.distance = race.distance
+      newRace.distance = race.distance.value
       newRace.duration = Int16(race.duration)
       newRace.date = race.date
 
@@ -55,14 +59,37 @@ class RaceRecapViewController: UIViewController {
   @IBAction func dismiss(_ sender: Any) {
     view.window?.rootViewController?.dismiss(animated: true, completion: nil)
   }
+
+  // MARK: - Display
+
+  private func updateDisplay() {
+    guard let race = race else { return }
+
+    title = FormatDisplay.date(race.date, style: .long)
+
+    let formattedDistance = FormatDisplay.distance(race.distance)
+    let formattedTime = FormatDisplay.time(race.duration)
+    let formattedSpeed = FormatDisplay.speedOrPace(distance: race.distance, seconds: race.duration, outputUnit: UnitSpeed.kilometersPerHour)
+    let formattedPace = FormatDisplay.speedOrPace(distance: race.distance, seconds: race.duration, outputUnit: UnitSpeed.minutesPerKilometer)
+
+    distanceLabel.text = formattedDistance
+    timeLabel.text = formattedTime
+    speedLabel.text = formattedSpeed
+    paceLabel.text = formattedPace
+  }
 }
 
 // Mark: - Map
 
 extension RaceRecapViewController: MKMapViewDelegate {
   private func mapRegion() -> MKCoordinateRegion {
-    let latitudes = race.locations.map { return $0.coordinate.latitude }
-    let longitudes = race.locations.map { return $0.coordinate.longitude }
+    guard let locations = race?.locations
+      else {
+        return MKCoordinateRegion()
+    }
+
+    let latitudes = locations.map { return $0.coordinate.latitude }
+    let longitudes = locations.map { return $0.coordinate.longitude }
 
     let maxLat = latitudes.max()!
     let minLat = latitudes.min()!
@@ -76,7 +103,12 @@ extension RaceRecapViewController: MKMapViewDelegate {
   }
 
   private func polyLine() -> MKPolyline {
-    let coords: [CLLocationCoordinate2D] = race.locations.map {
+    guard let locations = race?.locations
+      else {
+        return MKPolyline()
+    }
+
+    let coords: [CLLocationCoordinate2D] = locations.map {
       return CLLocationCoordinate2D(latitude: $0.coordinate.latitude, longitude: $0.coordinate.longitude)
     }
 
